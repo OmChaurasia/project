@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .top {
+            background: #116dea;
+            color: #fff;
+            line-height: 34px;
+            position: relative;
+            display: flex;
+        }
+
+        .top .contact {
+            padding-left: 100px;
+        }
+
+        .top .dailer {
+            padding-left: 50px;
+        }
+
+        .top .social {
+            padding-left: 50px;
+            position: absolute;
+            right: 50px;
+        }
+
+        .top .social i {
+            margin-left: 14px;
+        }
+
+        .navbar {
+            height: 60px;
+            //  background: red;
+            line-height: 60px;
+            position: relative;
+            display: flex;
+        }
+
+        .navbar .logo {
+            // background: blue;
+            display: flex;
+            width: 200px;
+            margin-left: 100px;
+            font-size: 34px;
+            font-weight: bold;
+            position: relative;
+            top: -7px;
+
+        }
+
+        .mainav {}
+
+        .mainav ul {
+            display: flex;
+            list-style: none;
+            // background: yellow;
+            position: relative;
+            right: 0;
+            top: -5px
+            
+        }
+
+        .mainav ul li{
+            text-decoration: none;
+            padding: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .mai{
+            text-decoration: none;
+            padding: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .mainav ul li select {
+            padding: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        .mainav ul li .home {
+            color: #7089b4;
+            border-bottom: 3px solid #7089b4;
+        }
+
+        .jumbo {
+            background-image: url(static/img.jpg);
+            background-color: rgba(202, 29, 29, 0.6);
+
+            position: relative;
+            height: 350px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .jumbo .cover {
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.58);
+            position: absolute;
+        }
+
+        .jumbo .innerbox {
+
+            //   background: blue;
+            z-index: 5;
+            margin-left: 100px;
+        }
+
+        .jumbo h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .jumbo p {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .jumbo #firstb {
+            line-height: 34px;
+            width: 150px;
+            font-size: 20px;
+            border: none;
+            background: #1e6fdc;
+            color: #fff;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .jumbo #secondb {
+            line-height: 34px;
+            width: 150px;
+            font-size: 20px;
+            border: none;
+            background: transparent;
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .content {
+            height: 500px;
+            //   background: blue;
+            position: relative;
+        }
+
+        .content .container {
+            margin: auto;
+            width: 90%;
+            position: absolute;
+            //   background: red;
+            height: 400px;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            grid-gap: 20px;
+        }
+
+        .content .container div {
+            background: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.473);
+        }
+
+        .content .container div span {
+            color: #2769c9;
+            font-size: 34px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="contact"><i class="fas fa-envelope"></i> contact@example.com</div>
+        <div class="dailer"><i class="fas fa-phone-alt"></i> +91 7309370691</div>
+        <div class="social">
+            <i class="fab fa-twitter"></i> <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i> <i class="fab fa-skype"></i> <i class="fab fa-linkedin"></i>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="logo">
+            <h3>Library</h3>
+        </div>
+        <div class="mainav">
+            <ul>
+                <li>Home</li>
+                <li data-toggle="modal" data-target="#myModal">Login</li>
+                <li data-toggle="modal" data-target="#myModal2">Sign Up</li>
+                <!-- <li>Team</li> -->
+                <!-- <li><select name="" id="">
+                    <option value="Drop Down">Drop Down</option>
+                    <option value="Drop">Drop</option>
+                </select></li> -->
+                <li>Services</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="signinusertype">Sign In As:</label>
+                            <select name="signinusertype" id="signinusertype" class="form-control">
+                                <option value="member">Member</option>
+                                <option value="librarian">Librarian</option>
+                              </select>
+                          </div>
+                        <div class="form-group">
+                          <label for="signinemail">Email address:</label>
+                          <input type="email" class="form-control" placeholder="Enter email" id="signinemail">
+                        </div>
+                        <div class="form-group">
+                          <label for="signinpwd">Password:</label>
+                          <input type="password" class="form-control" placeholder="Enter password" id="signinpwd">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/handlesignup" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="signupusertype">Sign Up As:</label>
+                            <select name="signupusertype" id="signupusertype" class="form-control">
+                                <option value="member">Member</option>
+                                <option value="librarian">Librarian</option>
+                              </select>
+                          </div>
+                        <div class="form-group">
+                            <label for="signupusername">Username:</label>
+                            <input type="text" class="form-control" placeholder="Enter username" id="signupusername" name="signupusername">
+                          </div>
+                        <div class="form-group">
+                          <label for="signupuseremail">Email address:</label>
+                          <input type="email" class="form-control" placeholder="Enter email" id="signupuseremail" name="signupuseremail">
+                        </div>
+                        <div class="form-group">
+                          <label for="signuppwd1">Password:</label>
+                          <input type="password" class="form-control" placeholder="Enter password" id="signuppwd1" name="signuppwd1">
+                        </div>
+                        <div class="form-group">
+                            <label for="signuppwd2">Confirm Password:</label>
+                            <input type="password" class="form-control" placeholder="Confirm password" id="signuppwd2" name="signuppwd2">
+                          </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                      </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbo">
+        <div class="cover"></div>
+        <div class="innerbox">
+            <h1>Welcome to <span style="color: #0965ce;">Library</span></h1>
+            <p>The only thing that you absolutely have to know, is the location of the library.</p>
+            <button id="firstb" data-toggle="modal" data-target="#myModal2">Get Started</button>
+
+            <button id="secondb"><span style="color: #0471c4;"><i class="far fa-play-circle"></i></span> Watch
+                Video</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container" data-toggle="modal" data-target="#myModal2">
+            <div><span style=""><i class="fas fa-basketball-ball"></i></span>
+                <br><br>
+                <b>26 Marathons</b><br><br>
+                Author: Meb Keflezighi
+            </div>
+            <div><span style=""><i class="fas fa-file-alt"></i></span>
+                <br><br>
+                <b>Psychology of Money</b><br><br>
+                Author: Morgan Housel
+            </div>
+            <div><span style=""><i class="far fa-clock"></i></span>
+                <br><br>
+                <b>The Time Machine</b><br><br>
+                Author: H. G. Wells
+            </div>
+            <div><span style=""><i class="fas fa-globe-africa"></i></span>
+                <br><br>
+                <b>The Alchemist</b><br><br>
+                Author: Paulo Coelho
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>
